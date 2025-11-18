@@ -1,0 +1,19 @@
+name        : ziglang
+version     : 0.15.2
+release     : 1
+homepage    : https://ziglang.org
+upstreams   :
+    - https://ziglang.org/download/0.15.2/zig-x86_64-linux-0.15.2.tar.xz:
+        hash: 02aa270f183da276e5b5920b1dac44a63f1a49e55050ebde3aecc9eb82f93239
+        unpackdir: "zig"
+summary     : Zig is a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.
+description : |
+    Zig is a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.
+license     :
+    - MIT
+install     : |
+    %install_dir %(installroot)%(libdir)/zig
+    cp -rv %(workdir)/* %(installroot)%(libdir)/zig
+
+    %install_dir %(installroot)%(bindir)
+    ln -sfv /usr/lib/zig/zig %(installroot)%(bindir)/zig

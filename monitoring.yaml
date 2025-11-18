@@ -1,0 +1,5 @@
+releases:
+  id: 13871
+  rss: https://github.com/ziglang/zig/tags.atom
+security:
+  cpe: ~ # No CPE found, last checked (2025-11-01)
